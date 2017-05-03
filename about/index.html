@@ -1,0 +1,89 @@
+---
+layout: about
+title: "About"
+description: "Traveler by Heart,Techie by brain."
+active: about
+header-img: "img/about-bg.jpg"
+---
+
+<a name="about"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <img class="img-responsive img-border img-left" src="{{ site.baseurl }}/shaswatgupta.jpg" alt="my avatar" width="200" height="150">
+            <br>
+            <div class="about-me">
+
+            {% for paragraph in site.data.yml.about.description %}
+                <p class="lead"> {{ paragraph.p }}</p>
+            {% endfor%}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wedo-head text-center">
+        <h3>Project <span>Showcase</span></h3>
+    </div>
+    <br> <br> 
+
+    {% assign value = 0 %}
+    {% for projects in site.data.yml.about.showcase %}
+    {% if value == 0 %}
+    {% assign value = 1 %}
+    
+    <!-- /.content-section-a -->
+    <a name="showcase"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            
+            <div class="advertising-grids">
+                <div class="col-md-6 advertising-left">
+                    <img src= "{{ site.baseurl }}{{ projects.project.img_src }}" class="responsive-image" title= "{{ projects.project.img_title }}"  alt = "{{ projects.project.img_alt }}"/>
+                </div>
+                <div class="col-md-6 advertising-right text-right">
+                    <h4>{{ projects.project.title }}<label> </label></h4>
+                    <p class="lead">{{ projects.project.details }}</p>
+                    <a class="wedobtn" href="{{ projects.project.readmore_url }}">Read more</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+    {% else %}
+    {% assign value = 0 %}
+
+    <!-- /.content-section-b -->   
+    <div class="content-section-b">
+
+        <div class="container">
+            <!-- wedo-grids -->
+            <div class="wedo-grids">
+                <div class="col-md-6 wedo-left">
+                    <h4><label> </label>{{ projects.project.title }}</h4>
+                    <p class="lead">{{ projects.project.details }}</p>
+                    <a class="wedobtn" href="{{ projects.project.readmore_url }}">Read more</a>
+                </div>
+                <div class="col-md-6 wedo-right">
+                <img src= "{{ site.baseurl }}{{ projects.project.img_src }}" class="responsive-image" title= "{{ projects.project.img_title }}"  alt = "{{ projects.project.img_alt }}"/>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- wedo-grids -->
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+    {% endif %}
+    {% endfor %}
+
+
+
+
