@@ -1,14 +1,14 @@
 # Site settings
 title: Digital Blog Space
-email: "shaswat770@gmail.com"
+email: "hrsenvar0@gmail.com"
 description: "Tech and Travel Photo Journal"
-url: "https://shaswatgupta.github.io"
+url: "https://hrsenvar.github.io/blog"
 #url: ""
 baseurl: ""
-facebook_username: "shaswat.gupta"
-twitter_username: "shaswat770"
-instagram_username: "shaswatgupta"
-github_username:  "shaswatgupta"
+facebook_username: "hrsenvar"
+twitter_username: "hrsenvar"
+instagram_username: "hrsenvar"
+github_username:  "hrsenvar"
 deviantart_username: 
 flickr_username: "shaswatgupta"
 discus_shortname: "shagup770"
@@ -16,8 +16,8 @@ share: true
 
 # Owner/author information
 owner:
-  name:   Shaswat Gupta
-  avatar: shaswatgupta.jpg
+  name:   Heeraram Senvar
+  avatar: heera.jpg
   favicon: favicon.ico
   info: personal website
 
